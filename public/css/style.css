@@ -1,0 +1,155 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container for layout */
+.main-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #3b3f48;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #ddd;
+}
+
+.sidebar-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.caller-list {
+    list-style-type: none;
+    overflow-y: auto;
+    max-height: 70vh;
+    padding: 10px 0;
+}
+
+.caller-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #4b4f59;
+    border-radius: 8px;
+}
+
+.caller-list li:hover {
+    background-color: #5c616e;
+}
+
+.call-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.call-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Video call section styling */
+.video-call-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.username-input-container {
+    margin-bottom: 20px;
+}
+
+.username-input-container input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.create-user-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.create-user-btn:hover {
+    background-color: #218838;
+}
+
+/* Video stream containers */
+.video-streams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.local-video-container, .remote-video-container {
+    width: 45%;
+    height: 100%;
+    background-color: black;
+    border-radius: 10px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.local-video-container video, .remote-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* End call button styling */
+.end-call-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-call-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.end-call-btn:hover {
+    background-color: darkred;
+}

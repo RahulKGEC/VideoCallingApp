@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Video Calling App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+    <main class="main-container">
+        <!-- Sidebar for contacts -->
+        <aside class="sidebar">
+            <h1 class="sidebar-heading">Contacts</h1>
+            <ul id="allusers" class="caller-list">
+                <!-- List of users will be dynamically added here -->
+            </ul>
+        </aside>
+        
+        <!-- Video call section -->
+        <section class="video-call-section">
+            <div class="username-input-container">
+                <input type="text" id="username" placeholder="Enter Username">
+                <button id="create-user" class="create-user-btn">Create</button>
+            </div>
+            
+            <div class="video-streams">
+                <div class="local-video-container">
+                    <video id="localVideo" autoplay muted playsinline></video>
+                </div>
+                <div class="remote-video-container">
+                    <video id="remoteVideo" autoplay playsinline></video>
+                </div>
+            </div>
+            
+            <button id="end-call-btn" class="end-call-btn d-none">
+                <img src="/images/end-call.png" alt="End Call">
+            </button>
+        </section>
+    </main>
+</body>
+</html>
